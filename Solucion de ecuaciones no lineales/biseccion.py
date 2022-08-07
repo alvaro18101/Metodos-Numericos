@@ -2,7 +2,8 @@
 # Solucion de ecuaciones no lineales mediante el metodo de biseccion
 # Autor: Alvaro Siesquen
 # -------------------------------------------------------------------------
-f = lambda x: x**2 - 5
+import numpy as np
+f = lambda x: np.exp(x)-2
 
 epsilon = float(input('Digite el error: '))
 a, c = float(input('Intervalo inicial a: ')),float(input('Intervalo inicial c: '))

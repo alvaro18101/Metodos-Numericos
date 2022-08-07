@@ -5,7 +5,7 @@
 program newton_raphson
 implicit none
 !Declaracion de variables
-real i					!Contador
+integer i					!Contador
 real x0, x, epsilon		!Variables del metodo
 real f, d				!Funciones
 

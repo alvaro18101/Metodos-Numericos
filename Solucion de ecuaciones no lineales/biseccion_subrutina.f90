@@ -1,5 +1,5 @@
 !------------------------------------------------------------------------
-!Solucion de ecuaciones no lineales mediante el metodo de biseccion
+!Solucion de ecuaciones no lineales mediante el metodo de biseccion mediante subrutina
 !Autor: Alvaro Siesquen
 !------------------------------------------------------------------------
 program biseccion
@@ -18,14 +18,8 @@ print*,'Digite el error'
 read*,epsilon
 b = (a + c)/2.
 
-do while (abs(c-a)>epsilon)
-if (f(a)*f(b)<=0) then
-	c = b
-else if (f(b)*f(c)<=0) then
-	a = b
-end if
-b = (a + c)/2.
-end do
+call metodo(a,c,epsilon,b)
+
 print*,'Raíz calculada: ' ,b
 end program
 
@@ -34,3 +28,15 @@ real function f(x)
 real x
 	f = exp(x)-2
 end function
+
+subroutine metodo(a,c,epsilon,b)
+real a,c,epsilon,b
+do while (abs(c-a)>epsilon)
+if (f(a)*f(b)<=0) then
+	c = b
+else if (f(b)*f(c)<=0) then
+	a = b
+end if
+b = (a + c)/2.
+end do
+end subroutine
