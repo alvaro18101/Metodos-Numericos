@@ -23,12 +23,13 @@ call metodo(a,c,epsilon,b)
 print*,'Raíz calculada: ' ,b
 end program
 
-!Funcion
+!Definiendo funcion para calcular su raiz
 real function f(x)
 real x
 	f = exp(x)-2
 end function
 
+!Metodo por subrutina
 subroutine metodo(a,c,epsilon,b)
 real a,c,epsilon,b
 do while (abs(c-a)>epsilon)

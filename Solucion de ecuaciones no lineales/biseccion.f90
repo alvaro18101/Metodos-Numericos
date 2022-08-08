@@ -29,7 +29,7 @@ end do
 print*,'Raíz calculada: ' ,b
 end program
 
-!Definiendo la funcion para hallar su raiz
+!Definiendo funcion para calcular su raiz
 real function f(x)
 real x
 	f = exp(x)-2
