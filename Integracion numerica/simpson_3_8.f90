@@ -1,5 +1,5 @@
 !------------------------------------------------------------------------
-!Integración numérica mediante la regla de 3/8 de Simpson
+!Integracion numerica mediante la regla de 3/8 de Simpson
 !Autor: Alvaro Siesquen
 !------------------------------------------------------------------------
 program simpson_3_8
@@ -22,11 +22,12 @@ do while(mod(N,3) .ne. 0)
 end do
 h = (b-a)/N
 sumatoria = 0
-do i=1,N-2,1	
+do i=1,N-1,1	
 	sumatoria = sumatoria + f(a+i*h)
 end do
-integral = 3*h*(f(a) + 3*sumatoria + f(b))/8
+integral = 3*h*(f(a) + 3*sumatoria + f(b))/8.
 print*,'Integral calculada: ' ,integral
+print*,'Longitud de la separacion: ' ,h
 end program
 
 !Definiendo la funcion a integral

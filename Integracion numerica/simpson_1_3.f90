@@ -1,5 +1,5 @@
 !------------------------------------------------------------------------
-!Integración numérica mediante la regla de 1/3 de Simpson
+!Integracion numerica mediante la regla de 1/3 de Simpson
 !Autor: Alvaro Siesquen
 !------------------------------------------------------------------------
 program simpson_1_3
@@ -33,6 +33,7 @@ do i=2,N-2,2		!sumatoria par
 end do
 integral = h*(f(a) + 4*sumatoria_impar + 2*sumatoria_par + f(b))/3.
 print*,'Integral calculada: ' ,integral
+print*,'Longitud de la separacion: ' ,h
 end program
 
 !Definiendo la funcion a integral

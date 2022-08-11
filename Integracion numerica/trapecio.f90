@@ -6,7 +6,7 @@ program trapecio
 implicit none
 !Declaracion de variables
 integer i, N				!Contador y N
-real h, a, b			!Variables del metodo
+real a, b, h			!Variables del metodo
 real f					!Funcion
 real sumatoria, integral
 
