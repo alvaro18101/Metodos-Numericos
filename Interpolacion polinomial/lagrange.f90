@@ -5,16 +5,21 @@
 program lagrange
 implicit none
 !Declaracion de variables
-integer i, N
-real,allocatable::datos(:,:)
+integer i, j, N
+real, dimension (5,2)::datos
 real V0
 
+open(8, file='data.dat', status='unknown')
+
+
 !Procedimiendo
-print*,'Número de puntos:'
+print*,'Numero de puntos:'
 read*,N
 
-allocate(datos(N,2))
 do i=1,N,1
-print*,i,'punto:'
-read*,datos(i,1),datos(i,2)
+read(8,*)datos(i,1:2)
 end do
+end do
+
+print*,datos
+end program
